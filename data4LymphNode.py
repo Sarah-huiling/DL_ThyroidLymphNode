@@ -23,7 +23,7 @@ def load_npy(x_path):
     label = [0, 0]
     data = np.load(x_path, allow_pickle=True)
     labels = load_label_form_xl('/media/zhl/Local/ lymphNode/grouping.xlsx')
-    # 提取PID
+    #
     # if len(x_path.split('_')[-1]) > 8:
     #     path = x_path[:-8]
     # else:
@@ -31,7 +31,7 @@ def load_npy(x_path):
     # id_index = labels.index(path.split('/')[-1])
     # 
     path = x_path[:-4]
-    id_index = labels.index(path.split('/')[-1])    # 提取PID，
+    id_index = labels.index(path.split('/')[-1])    
     if labels[id_index+1] == 1.0:
         label = [0, 1]
     if labels[id_index+1] == 0.0:
